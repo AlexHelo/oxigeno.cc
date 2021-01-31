@@ -11,7 +11,7 @@ services:
       - /home/oxigenocc/data-db/:/var/lib/postgresql/data # Cambia oxigenocc por el nombre del usuario de tu host
   web:
     restart: always
-    build: .
+    image: oxigenocc/oxigeno.cc:latest 
     command: bash -c "./entrypoint.sh"
     environment:
       - SECRET_KEY=<django_secret_key> # Cambia esto por una generada aquí https://miniwebtool.com/django-secret-key-generator/
